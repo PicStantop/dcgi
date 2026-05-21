@@ -1,258 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gallery — Dominion Christian Gathering International</title>
-  <meta name="description" content="Explore photo memories from the services, events, and ministry of Dominion Christian Gathering International." />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" type="image/jpeg" href="images/logo.png" />
-  <style>
-    .gallery-filter {
-      display: flex; flex-wrap: wrap; gap: 0.5rem;
-      justify-content: center; margin-bottom: 2.5rem;
-    }
-    <!-- FOOTER -->
-    <footer>
-      <div class="container">
-        <div class="row footer-grid">
-          <div class="col-lg-4 footer-brand">
-            <img src="images/logo.png" alt="DCGI Logo" />
-            <div class="org-name">Dominion Christian<br />Gathering International</div>
-            <p>Walking in faith, living in dominion. A community united by the Word of God and the love of Christ.</p>
-            <div class="footer-cac">CAC/IT/NO 87720 &bull; CAC/IT/NO 151522 (Lagos)</div>
-          </div>
-          <div class="col-lg-2">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="leadership.html">Leadership</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-2">
-            <h4>Services</h4>
-            <ul>
-              <li><a href="#">Sunday Service — 8 AM &amp; 10:30 AM</a></li>
-              <li><a href="#">Bible Study — Wednesday 5:30 PM</a></li>
-              <li><a href="#">Prayer Night — Friday 7 PM</a></li>
-              <li><a href="#">Youth Service</a></li>
-              <li><a href="#">Children's Church</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-4">
-            <h4>Contact</h4>
-            <address>
-              <p><strong style="color:var(--gold-light);">Headquarters</strong><br />Adonu by Iwezue, Agbor,<br />Delta State, Nigeria</p>
-              <p><strong style="color:var(--gold-light);">Benin Branch</strong><br />134 Airport Road, GRA,<br />Benin City, Edo State</p>
-              <p><a href="tel:+2348063743254">+234 806 374 3254</a></p>
-              <p><a href="tel:+2348032914747">+234 803 291 4747</a></p>
-            </address>
-          </div>
-        </div>
+  <meta name="description" content="Explore photo memories from the services and ministry of Dominion Christian Gathering International."/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="icon" type="image/jpeg" href="images/logo.jpg"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <img src="images/logo.jpg" alt="DCGI Logo"/>
+      <div>
+        <span class="brand-name">Dominion Christian Gathering Intl.</span>
+        <span class="brand-tag">CAC/IT/NO 87720</span>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Dominion Christian Gathering International. All rights reserved.</p>
-      </div>
-    </footer>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 mt-2 mt-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="leadership.html">Leadership</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item ms-lg-2"><a class="nav-link nav-cta" href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <!-- PAGE HEADER -->
 <header class="page-header">
-  <div class="page-header-content">
-    <div class="breadcrumb">Home &rsaquo; <span>Gallery</span></div>
+  <div class="container">
+    <div class="ph-breadcrumb">Home &rsaquo; <span>Gallery</span></div>
     <h1>Ministry Gallery</h1>
     <p>Snapshots of God's faithfulness — lives touched, miracles witnessed, a community united in worship.</p>
-    <div class="gold-line"></div>
+    <div class="ph-gold-bar"></div>
   </div>
 </header>
 
 <!-- GALLERY -->
-<section class="section" style="background: var(--white);">
-  <div class="section-inner">
-    <div class="container">
+<section class="py-5 bg-white">
+  <div class="container py-3">
 
-      <div class="gallery-filter">
-      <button class="filter-btn active" onclick="filterGallery('all', this)">All Photos</button>
-      <button class="filter-btn" onclick="filterGallery('worship', this)">Worship &amp; Prayer</button>
-      <button class="filter-btn" onclick="filterGallery('ministry', this)">Ministry</button>
-      <button class="filter-btn" onclick="filterGallery('congregation', this)">Congregation</button>
+    <!-- Filter buttons -->
+    <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
+      <button class="filter-btn active" onclick="filterGallery('all',this)">All Photos</button>
+      <button class="filter-btn" onclick="filterGallery('worship',this)">Worship &amp; Prayer</button>
+      <button class="filter-btn" onclick="filterGallery('ministry',this)">Ministry</button>
+      <button class="filter-btn" onclick="filterGallery('congregation',this)">Congregation</button>
     </div>
 
-    <div class="gallery-masonry" id="galleryGrid">
+    <!-- Gallery grid — each image in its own col for filtering -->
+    <div class="row g-3" id="galleryGrid">
 
-      <div class="gallery-item" data-cat="congregation">
-        <img src="images/IMG-20260520-WA0042.jpg" alt="DCGI Congregation" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="ministry">
-        <img src="images/IMG-20260520-WA0041.jpg" alt="Apostolic Ministry" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="worship">
-        <img src="images/IMG-20260520-WA0044.jpg" alt="Worship Service" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="congregation">
-        <img src="images/IMG-20260520-WA0043.jpg" alt="Church Gathering" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="congregation">
-        <img src="images/IMG-20260520-WA0040.jpg" alt="DCGI Fellowship" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="ministry">
-        <img src="images/IMG-20260520-WA0055.jpg" alt="Ministry Service" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="congregation">
-        <img src="images/IMG-20260520-WA0046.jpg" alt="Church Members" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="congregation">
-        <img src="images/IMG-20260520-WA0047.jpg" alt="DCGI Community" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="ministry">
-        <img src="images/IMG-20260520-WA0048.jpg" alt="Apostolic Service" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="ministry">
-        <img src="images/IMG-20260520-WA0049.jpg" alt="Apostle Monye Preaching" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="ministry">
-        <img src="images/IMG-20260520-WA0050.jpg" alt="Preaching the Word" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="worship">
-        <img src="images/IMG-20260520-WA0051.jpg" alt="Worship" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="congregation">
-        <img src="images/IMG-20260520-WA0052.jpg" alt="Church Service" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="congregation">
-        <img src="images/IMG-20260520-WA0053.jpg" alt="DCGI Members" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="congregation">
-        <img src="images/IMG-20260520-WA0054.jpg" alt="Church Event" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="ministry">
-        <img src="images/IMG-20260520-WA0056.jpg" alt="Ministry Moment" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="congregation">
-        <img src="images/IMG-20260520-WA0057.jpg" alt="DCGI Gathering" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="congregation">
-        <img src="images/IMG-20260520-WA0058.jpg" alt="Church Community" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="ministry">
-        <img src="images/IMG-20260520-WA0059.jpg" alt="Apostle Ministering" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="worship">
-        <img src="images/IMG-20260520-WA0060.jpg" alt="Worship Moment" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="ministry">
-        <img src="images/IMG-20260520-WA0031.jpg" alt="Church Ministry" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="congregation">
-        <img src="images/IMG-20260520-WA0032.jpg" alt="Church Gathering" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="congregation">
-        <img src="images/IMG-20260520-WA0033.jpg" alt="DCGI Service" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="ministry">
-        <img src="images/IMG-20260520-WA0034.jpg" alt="Ministry Service" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="congregation">
-        <img src="images/IMG-20260520-WA0035.jpg" alt="Church Community" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="worship">
-        <img src="images/IMG-20260520-WA0036.jpg" alt="Praise &amp; Worship" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="congregation">
-        <img src="images/IMG-20260520-WA0037.jpg" alt="DCGI Members" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="congregation">
-        <img src="images/IMG-20260520-WA0038.jpg" alt="Church Gathering" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="worship">
-        <img src="images/IMG-20260520-WA0039.jpg" alt="Worship Service" loading="lazy" />
-      </div>
-      <div class="gallery-item" data-cat="congregation">
-        <img src="images/IMG-20260520-WA0045.jpg" alt="Church Fellowship" loading="lazy" />
-      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="congregation"><img src="images/IMG-20260520-WA0042.jpg" alt="DCGI Congregation" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
 
-      </div>
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="ministry"><img src="images/IMG-20260520-WA0041.jpg" alt="Apostolic Ministry" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
+
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="worship"><img src="images/IMG-20260520-WA0044.jpg" alt="Worship Service" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
+
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="congregation"><img src="images/IMG-20260520-WA0043.jpg" alt="Church Gathering" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
+
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="congregation"><img src="images/IMG-20260520-WA0040.jpg" alt="DCGI Fellowship" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
+
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="ministry"><img src="images/IMG-20260520-WA0055.jpg" alt="Ministry Service" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
+
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="congregation"><img src="images/IMG-20260520-WA0046.jpg" alt="Church Members" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
+
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="congregation"><img src="images/IMG-20260520-WA0047.jpg" alt="DCGI Community" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
+
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="ministry"><img src="images/IMG-20260520-WA0048.jpg" alt="Apostolic Service" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
+
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="ministry"><img src="images/IMG-20260520-WA0049.jpg" alt="Apostle Monye Preaching" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
+
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="ministry"><img src="images/IMG-20260520-WA0050.jpg" alt="Preaching the Word" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
+
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="worship"><img src="images/IMG-20260520-WA0051.jpg" alt="Worship" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
+
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="congregation"><img src="images/IMG-20260520-WA0052.jpg" alt="Church Service" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
+
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="congregation"><img src="images/IMG-20260520-WA0053.jpg" alt="DCGI Members" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
+
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="congregation"><img src="images/IMG-20260520-WA0054.jpg" alt="Church Event" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
+
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="ministry"><img src="images/IMG-20260520-WA0056.jpg" alt="Ministry Moment" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
+
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="congregation"><img src="images/IMG-20260520-WA0057.jpg" alt="DCGI Gathering" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
+
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="congregation"><img src="images/IMG-20260520-WA0058.jpg" alt="Church Community" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
+
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="ministry"><img src="images/IMG-20260520-WA0059.jpg" alt="Apostle Ministering" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
+
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="worship"><img src="images/IMG-20260520-WA0060.jpg" alt="Worship Moment" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
+
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="ministry"><img src="images/IMG-20260520-WA0031.jpg" alt="Church Ministry" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
+
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="congregation"><img src="images/IMG-20260520-WA0032.jpg" alt="Church Gathering" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
+
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="congregation"><img src="images/IMG-20260520-WA0033.jpg" alt="DCGI Service" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
+
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="ministry"><img src="images/IMG-20260520-WA0034.jpg" alt="Ministry Service" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
+
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="worship"><img src="images/IMG-20260520-WA0036.jpg" alt="Praise &amp; Worship" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
+
+      <div class="col-6 col-md-4 col-lg-3 gallery-col"><div class="gallery-item" data-cat="congregation"><img src="images/IMG-20260520-WA0045.jpg" alt="Church Fellowship" loading="lazy"/><div class="gallery-overlay"><svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div></div>
+
     </div>
   </div>
 </section>
 
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose">&times;</button>
-  <img src="" alt="Gallery Image" id="lightboxImg" />
+  <button class="lb-close" id="lbClose">&times;</button>
+  <img src="" alt="Gallery Image" id="lbImg"/>
 </div>
 
 <!-- CTA -->
-<section class="cta-band">
-  <div class="section-label" style="color: var(--gold);">Be With Us</div>
-  <h2>Experience It for Yourself</h2>
-  <p>Pictures tell part of the story. Come and experience the warmth, faith, and power of DCGI in person.</p>
-  <a href="contact.html" class="btn-primary">Find a Location</a>
+<section class="cta-band py-5 text-center">
+  <div class="container py-2">
+    <span class="sec-label" style="color:var(--gold);">Be With Us</span>
+    <h2 class="mb-3">Experience It for Yourself</h2>
+    <p class="mb-4 mx-auto" style="max-width:460px;">Pictures tell part of the story. Come and experience the warmth, faith, and power of DCGI in person.</p>
+    <a href="contact.html" class="btn-gold">Find a Location</a>
+  </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="images/logo.png" alt="DCGI Logo" />
-      <div class="org-name">Dominion Christian<br />Gathering International</div>
-      <p>Walking in faith, living in dominion. A community united by the Word of God and the love of Christ.</p>
-      <div class="footer-cac">CAC/IT/NO 87720 &bull; CAC/IT/NO 151522 (Lagos)</div>
+<footer class="py-5">
+  <div class="container">
+    <div class="row g-4 mb-4">
+      <div class="col-12 col-md-6 col-lg-4">
+        <img src="images/logo.jpg" alt="DCGI" style="height:54px;margin-bottom:0.75rem;"/>
+        <div class="ft-name mb-2">Dominion Christian<br/>Gathering International</div>
+        <p>Walking in faith, living in dominion — a community united by the love of Christ.</p>
+        <div class="ft-cac mt-2">CAC/IT/NO 87720 &bull; CAC/IT/NO 151522 (Lagos)</div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6>Quick Links</h6>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="leadership.html">Leadership</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6>Services</h6>
+        <ul>
+          <li><a href="#">Sunday 8 &amp; 10:30 AM</a></li>
+          <li><a href="#">Wed Bible Study 5:30</a></li>
+          <li><a href="#">Fri Prayer Night 7 PM</a></li>
+          <li><a href="#">Youth Service</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-lg-4">
+        <h6>Contact</h6>
+        <address style="font-family:'Open Sans',sans-serif;">
+          <p class="mb-1"><strong style="color:var(--gold-lt);">HQ:</strong> Adonu by Iwezue, Agbor, Delta State</p>
+          <p class="mb-1"><strong style="color:var(--gold-lt);">Benin:</strong> 134 Airport Road, GRA, Benin City</p>
+          <p class="mb-0"><a href="tel:+2348063743254">+234 806 374 3254</a> &nbsp; <a href="tel:+2348032914747">+234 803 291 4747</a></p>
+        </address>
+      </div>
     </div>
-    <div>
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="leadership.html">Leadership</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
+    <div class="footer-bottom pt-3 d-flex flex-wrap justify-content-between gap-2">
+      <span>&copy; 2025 Dominion Christian Gathering International. All rights reserved.</span>
     </div>
-    <div>
-      <h4>Services</h4>
-      <ul>
-        <li><a href="#">Sunday Service — 8 AM &amp; 10:30 AM</a></li>
-        <li><a href="#">Bible Study — Wednesday 5:30 PM</a></li>
-        <li><a href="#">Prayer Night — Friday 7 PM</a></li>
-        <li><a href="#">Youth Service</a></li>
-        <li><a href="#">Children's Church</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Contact</h4>
-      <address>
-        <p><strong style="color:var(--gold-light);">Headquarters</strong><br />Adonu by Iwezue, Agbor,<br />Delta State, Nigeria</p>
-        <p><strong style="color:var(--gold-light);">Benin Branch</strong><br />134 Airport Road, GRA,<br />Benin City, Edo State</p>
-        <p><a href="tel:+2348063743254">+234 806 374 3254</a></p>
-        <p><a href="tel:+2348032914747">+234 803 291 4747</a></p>
-      </address>
-    </div>
-  </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2025 Dominion Christian Gathering International. All rights reserved.</p>
   </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/main.js"></script>
-<script>
-function filterGallery(cat, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.gallery-item').forEach(item => {
-    if (cat === 'all' || item.dataset.cat === cat) {
-      item.style.display = 'block';
-    } else {
-      item.style.display = 'none';
-    }
-  });
-}
-</script>
 </body>
 </html>
